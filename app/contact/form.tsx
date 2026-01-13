@@ -132,7 +132,7 @@ export default function ContactFormSection() {
                   type="email"
                   required
                   autoComplete="email"
-                  placeholder="you@company.com"
+                  placeholder="your@email"
                   className="
                     mt-2 w-full rounded-xl
                     bg-white
@@ -223,10 +223,8 @@ export default function ContactFormSection() {
                   : "Send Message"}
               </button>
 
-              {/* small privacy note */}
-              <p className="text-xs text-slate-600 text-center">
-                We’ll only use your details to respond to your inquiry.
-              </p>
+            
+             
             </form>
           </motion.div>
         </div>

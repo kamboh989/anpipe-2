@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  keywords: site.keywords,
+  icons: {
+    icon: site.favicon.icon,
+    shortcut: site.favicon.shortcut,
+    apple: site.favicon.apple,
+  },
   alternates: {
     canonical: "/",
   },

@@ -138,7 +138,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2 sm:gap-3">
               {/* Desktop CTA */}
               <Link
-                href="/get-started"
+                href="/contact"
                 className="
                   hidden sm:inline-flex
                   items-center justify-center
@@ -210,7 +210,7 @@ export default function Navbar() {
               {/* Mobile CTA full width */}
               <div className="mt-3">
                 <Link
-                  href="/get-started"
+                  href="/contact"
                   className="
                     inline-flex w-full items-center justify-center
                     rounded-xl px-5 py-3

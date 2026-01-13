@@ -7,9 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Add your actual routes here
   const routes = [
     "",
-    "/about",
-    "/services",
-    "/work",
+    "/post",
     "/contact",
     "/speaking",
     "/media-kit",

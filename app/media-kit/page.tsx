@@ -9,6 +9,18 @@ export const metadata: Metadata = {
   title: "Media Kit",
   description:
     "Download and preview media kit assets for Shannon Smith—bio versions, headshots, speaking topics, AV requirements, and booking details.",
+     keywords: [
+  "speaker media kit",
+  "neuroscience speaker media kit",
+  "Shannon Smith media kit",
+  "speaker bio and headshots",
+  "keynote speaker assets",
+  "event planner speaker kit",
+  "speaker one sheet",
+  "press kit neuroscience speaker",
+  "corporate speaker media kit"
+],
+
   alternates: { canonical: "/media-kit" },
   openGraph: {
     title: `Media Kit | ${site.name}`,

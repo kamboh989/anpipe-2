@@ -70,7 +70,7 @@ export default function SpeakingHero() {
             {/* Buttons */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                href="/speaking-inquiries"
+                href="/contact"
                 className="
                   inline-flex items-center justify-center
                   rounded-xl px-6 py-3

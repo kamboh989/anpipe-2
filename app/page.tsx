@@ -7,7 +7,9 @@ import  Delivery  from "./components/delivery";
 import  Result  from "./components/result";
 import  About  from "./components/about";
 import  Feedback  from "./components/clientsFeedback";
-import  Faq  from "./components/faq";
+import  FAQSection  from "./components/faq";
+import Help from "./components/whoIHelp";
+import Def from "./components/defination";
 
 const page = () => {
   return (
@@ -18,9 +20,11 @@ const page = () => {
       <Program />
       <Delivery />
       <Result />
+      <Help />
       <About />
+      <Def />
       <Feedback />
-      <Faq />
+      <FAQSection />
     </div>
   )
 }

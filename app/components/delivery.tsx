@@ -1,7 +1,7 @@
 export default function HowDeliveredSection() {
   return (
     <section
-      aria-labelledby="delivered-title"
+      aria-labelledby="how-help-title"
       className="
         py-14 sm:py-18
         bg-[linear-gradient(120deg,#ffffff_0%,#fff1f7_55%,#ffffff_100%)]
@@ -11,17 +11,17 @@ export default function HowDeliveredSection() {
         {/* Heading (center) */}
         <div className="text-center max-w-2xl mx-auto">
           <h2
-            id="delivered-title"
+            id="how-help-title"
             className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
           >
-            How Is It{" "}
-            <span className="text-pink-600">Delivered</span>?
+            How I{" "}
+            <span className="text-pink-600">Help</span>
           </h2>
 
           {/* AEO: short direct answer first */}
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
-            The program is delivered through structured sessions, guided practice,
-            and real-world application—so your team can apply the skills immediately.
+            I apply neuroscience to environments where pressure shapes behavior
+            long before people realize it.
           </p>
         </div>
 
@@ -37,11 +37,12 @@ export default function HowDeliveredSection() {
             "
           >
             <h3 className="text-lg font-extrabold text-slate-900">
-              10-Week Sprint
+              Sales & Revenue Performance
             </h3>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">
-              A structured training sprint with clear weekly themes, exercises,
-              and prompts to build skills step-by-step.
+              Buyers rarely stall because they don’t see value. They stall because
+              their nervous systems are overloaded by risk, scrutiny, and fear of
+              making the wrong decision.
             </p>
           </article>
 
@@ -55,11 +56,13 @@ export default function HowDeliveredSection() {
             "
           >
             <h3 className="text-lg font-extrabold text-slate-900">
-              Support + Practice
+              Reducing Buyer Threat
             </h3>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">
-              Live guidance, coaching-style feedback, and practice labs so the
-              team builds confidence and consistency.
+              I work with sales professionals, founders, and revenue teams to
+              recognize buyer threat states, reduce cognitive load, create neural
+              synchrony, and guide decisions in ways that feel safe to approve
+              internally.
             </p>
           </article>
 
@@ -73,11 +76,12 @@ export default function HowDeliveredSection() {
             "
           >
             <h3 className="text-lg font-extrabold text-slate-900">
-              Implementation
+              Clearer Outcomes
             </h3>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700">
-              Real-world implementation with scripts, frameworks, and workflows
-              your team can plug into calls, DMs, and follow-ups.
+              The result is clearer conversations, shorter sales cycles, and
+              fewer last-minute “no” decisions—without pressure, chasing, or
+              forcing momentum.
             </p>
           </article>
         </div>

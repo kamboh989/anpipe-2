@@ -9,34 +9,43 @@ export default function SalesProblemSection() {
       "
     >
       <div className="mx-auto max-w-4xl px-4 text-center">
-        {/* Question heading (AEO trigger) */}
+        {/* Heading (Problem framing) */}
         <h2
           id="sales-problem-title"
           className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
         >
-          What if your sales team could{" "}
+          The real problem isn’t{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">
-            close more
-          </span>{" "}
-          without getting{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-pink-500">
-            ghosted
+            skill or effort
           </span>
-          ?
         </h2>
 
-        {/* Direct short answer (VERY important for AEO) */}
+        {/* Core insight (AEO direct answer) */}
         <p className="mt-5 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-slate-700">
-          Sales teams lose deals not because of price or skill—but because buyers
-          feel pressured, confused, or emotionally disconnected during the
-          decision process.
+          Most challenges aren’t caused by a lack of intelligence, experience, or
+          effort. They come from how the brain responds to risk, power,
+          uncertainty, and social threat.
         </p>
 
-        {/* Supporting explanation */}
-        <p className="mt-3 max-w-3xl mx-auto text-base text-slate-600">
-          Ethical persuasion and neuroscience-based communication help sellers
-          build trust, reduce resistance, and keep conversations moving forward
-          without chasing or pushing prospects.
+        {/* Scannable problem signals */}
+        <div className="mt-6 space-y-2 text-base sm:text-lg text-slate-700">
+          <p>Buyer hesitation.</p>
+          <p>Leadership friction.</p>
+          <p>Toxic management dynamics.</p>
+          <p>Change initiatives that stall after launch.</p>
+        </div>
+
+        {/* AEO insight + authority close */}
+        <p className="mt-6 max-w-3xl mx-auto text-base leading-relaxed text-slate-600">
+          These are not random failures. They follow predictable neurological
+          patterns. When those patterns are understood, outcomes shift.
+          Decisions become clearer. Conversations move forward. Stress stops
+          accumulating in the background.
+        </p>
+
+        <p className="mt-4 max-w-3xl mx-auto text-base font-medium text-slate-700">
+          This work applies neuroscience to the moments where careers, revenue,
+          and organizations are shaped.
         </p>
       </div>
     </section>

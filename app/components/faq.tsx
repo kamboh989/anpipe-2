@@ -10,52 +10,88 @@ export default function FAQSection() {
   const faqs: FAQ[] = useMemo(
     () => [
       {
-        q: "What is the most effective sales training for B2B teams?",
-        a: "The most effective sales training today blends neuroscience, buyer psychology, and modern communication skills. Traditional script-based methods don’t match how buyers make decisions. NeuroSell uses cognitive science to help reps build trust faster, reduce resistance, and communicate with clarity — improving conversions without pressure.",
+        q: "What does “applied neuroscience” mean in your work?",
+        a: "It means translating established brain science into tools that can be used in real conversations, decisions, and work environments.",
       },
       {
-        q: "Does sales training actually work for experienced reps?",
-        a: "Yes — when it targets the brain, not just techniques. Experienced reps don’t usually lack knowledge; they struggle with pressure, rejection, cognitive load, and buyer hesitation. Neuroscience-based training helps them regulate stress, read buyer signals, and navigate complex deals with more clarity and confidence.",
+        q: "Is this therapy or mental health treatment?",
+        a: "No. This work focuses on professional behavior, decision-making, communication, and performance.",
       },
       {
-        q: "How can we improve our sales team’s performance quickly?",
-        a: "Performance improves fastest when you address the nervous system and decision-making pathways behind every conversation. Teaching reps how to stay regulated, reduce neural noise, and create cognitive ease for buyers leads to immediate improvements in clarity, trust, and movement in pipeline conversations — often within 30–45 days.",
+        q: "Who is this work for?",
+        a: "Sales professionals, solopreneurs, coaches, leaders, and organizations operating under pressure or change.",
       },
       {
-        q: "Why do sales reps freeze, ramble, or lose clarity on calls?",
-        a: "This happens because of “neural noise” — the brain’s response to stress or uncertainty. When neural noise increases, clarity decreases. Neuroscience-based sales training teaches reps how to stay regulated so they think clearly, speak concisely, and stay attuned to the buyer.",
+        q: "Do I need a background in neuroscience to work with you?",
+        a: "No. Everything is explained in clear language and designed to be practical.",
       },
       {
-        q: "How can we reduce buyer hesitation in our sales process?",
-        a: "Buyers hesitate when their brain perceives lack of clarity, risk, or cognitive overload. Training your team to lower buyer threat responses, simplify messaging, and create emotional safety helps buyers move forward confidently. This reduces ghosting, delays, and let me think about it.",
+        q: "How is this different from traditional sales training?",
+        a: "Traditional sales training focuses on scripts and tactics. This work focuses on how buyers and sellers think, decide, and regulate under pressure.",
       },
       {
-        q: "What skills separate top-performing sellers from everyone else?",
-        a: "Top performers regulate their emotions, communicate with clarity, read nonverbal signals, reduce cognitive load for buyers, and create rapid trust. These are neuroscience-driven skills — not scripts — and they directly influence deal velocity and close rates.",
-      },
-       {
-        q: "How does neuroscience improve sales performance?",
-        a: "Neuroscience helps sellers understand how the brain processes risk, trust, clarity, and decision-making. When reps learn how to regulate their nervous system and communicate in a way that aligns with buyer psychology, sales conversations become easier, more natural, and more effective.",
+        q: "Can this help me leave corporate and start my own business?",
+        a: "Yes. Many clients use this work to build predictable revenue before exiting corporate roles.",
       },
       {
-        q: "What’s the ROI of neuroscience-based sales training?",
-        a: "Leaders typically see faster ramp times, fewer stalled deals, reduced ghosting, better emotional stability on teams, and higher conversion rates. Many organizations see measurable performance gains within 60–90 days.",
+        q: "What is the 20K Brain-Based Sales System?",
+        a: "It is a neuroscience-informed framework for monetizing LinkedIn, clarifying offers, and building a repeatable sales process that generates steady clients.",
       },
-         {
-        q: "How do we help reps handle rejection better?",
-        a: "Rejection triggers the brain’s threat response, causing reps to spiral mentally or avoid follow-ups. Neuroscience-based training teaches emotional regulation techniques that help reps reset within minutes and stay composed, instead of carrying rejection into the rest of their day.",
+      {
+        q: "Is this only for coaches and consultants?",
+        a: "No. The principles apply to anyone selling ideas, services, or solutions.",
       },
-       {
-        q: "How do we build trust faster in sales conversations?",
-        a: "Trust forms when buyers feel safe, understood, and clear on what’s happening next. Techniques like neural synchrony, pacing, tone matching, cognitive ease, and transparent framing significantly accelerate trust — without pressure.",
+      {
+        q: "Does this work help with buyer hesitation and stalled deals?",
+        a: "Yes. Much of the work focuses on reducing buyer threat, cognitive overload, and decision paralysis.",
       },
-       {
-        q: "What causes buyers to ghost even when they seem interested?",
-        a: "Ghosting often happens when buyers feel overwhelmed, unclear, or emotionally pressured. When sellers create cognitive simplicity, reduce decision friction, and keep emotional safety high, ghosting drops dramatically.",
+      {
+        q: "Is this anti-corporate or anti-management?",
+        a: "No. It is pro-agency. The goal is informed choice, whether someone stays or leaves.",
       },
-       {
-        q: "How long does it take to see results from neuroscience-based sales training?",
-        a: "Teams typically see behavioral shifts within 4 weeks and measurable changes in pipeline movement within 90 days, depending on deal cycles.",
+      {
+        q: "Can this help me deal with a toxic boss without quitting?",
+        a: "Yes. The toxic boss work focuses on nervous-system regulation, pattern recognition, and maintaining clarity under power imbalance.",
+      },
+      {
+        q: "Will this help me become more confident?",
+        a: "Confidence often improves as a byproduct of clarity, regulation, and predictability.",
+      },
+      {
+        q: "Is this mindset work?",
+        a: "No. The focus is on neurological mechanisms that shape behavior under stress.",
+      },
+      {
+        q: "How quickly do people see results?",
+        a: "Many people notice shifts in clarity, stress response, and communication within weeks.",
+      },
+      {
+        q: "Will this help me become more confident?",
+        a: "Confidence often improves as a byproduct of clarity, regulation, and predictability.",
+      },
+      {
+        q: "Does this require daily practices or long routines?",
+        a: "No. Most tools are designed to work in the moment, during real interactions.",
+      },
+      {
+        q: "Can organizations use this for change initiatives?",
+        a: "Yes. The work is used to increase adoption, reduce resistance, and prevent burnout during change.",
+      },
+      {
+        q: "Is this data-backed or experiential?",
+        a: "Both. The work is grounded in peer-reviewed research and tested in real-world environments.",
+      },
+      {
+        q: "Do you work with teams or only individuals?",
+        a: "Both. I work with individuals, sales teams, leadership groups, and organizations.",
+      },
+      {
+        q: "Is this suitable for high-performing professionals?",
+        a: "Yes. Many clients are already successful but want more consistency and control.",
+      },
+      {
+        q: "What is the first step to working together?",
+        a: "Most people start by exploring the newsletter, content, or a short conversation to assess fit.",
       },
     ],
     []
@@ -108,7 +144,10 @@ export default function FAQSection() {
           {faqs.map((item, i) => {
             const open = openIndex === i;
             return (
-              <div key={item.q} className="border-t border-black/10 first:border-t-0">
+              <div
+                key={`${item.q}-${i}`} // ✅ unique key (UI same)
+                className="border-t border-black/10 first:border-t-0"
+              >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? -1 : i)}
@@ -140,7 +179,11 @@ export default function FAQSection() {
                 <div
                   className={`
                     grid transition-all duration-200
-                    ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
+                    ${
+                      open
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
+                    }
                   `}
                 >
                   <div className="overflow-hidden px-5 sm:px-6 pb-4 sm:pb-5">

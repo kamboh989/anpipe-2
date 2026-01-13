@@ -45,23 +45,31 @@ export default function AboutShannonSection() {
 
             {/* AEO: short answer first */}
             <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
-            Shannon is an expert in consumer psychology, corporate sales training and applied neuroscience as it relates to the buyer's brain. She is a HarvardX Verified Neuroscience Researcher. She’s been helping people understand their brain in all different verticals and industries, including Big Tech, for ~20 years by teaching them how to tap into our brain to improve our performance in both the personal and professional sense.
+              Shannon is a HarvardX-verified neuroscience researcher and
+              corporate trainer specializing in consumer psychology, applied
+              neuroscience, and the buyer’s brain. For nearly 20 years, she’s
+              helped teams across industries—including Big Tech—improve
+              performance, communication, and decision-making.
             </p>
 
-            {/* Supporting paragraphs (keep clean, not too long) */}
+            {/* Supporting paragraphs (home-friendly, shorter) */}
             <div className="mt-4 space-y-4 text-slate-700 leading-relaxed">
               <p>
-                She teaches her clients how to tap into the prospect's brain to improve sales. She's an expert in establishing a profitable brand and business via Linkedin and helps her clients not only establish brain-based sales systems but she also helps them to grow their own personal brands.
+                She teaches ethical, brain-based sales systems and LinkedIn
+                trust-building frameworks that help professionals grow authority
+                and close with clarity—without pressure.
               </p>
               <p>
-                Shannon volunteers at Venture Mechanics, a Seattle/Bellevue-based startup accelerator to help founders be more effective in sales. Shannon developed a mobile gaming app based on neuroscience research that changes your habits while you play and is also partnering to create an agentic AI model that predicts sales team performance (kind of like the minority report for sales teams). She is a captain, loves to sail and lives in the PNW.
+                Shannon also supports founders through Venture Mechanics and
+                builds neuroscience-based tools for behavior change and sales
+                performance.
               </p>
             </div>
 
             {/* Buttons */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                href="/apply"
+                href="/contact"
                 className="
                   inline-flex items-center justify-center
                   rounded-xl px-6 py-3
@@ -72,11 +80,11 @@ export default function AboutShannonSection() {
                   transition hover:-translate-y-0.5
                 "
               >
-                Enroll Now
+                Work With Shannon
               </Link>
 
               <Link
-                href="/podcast"
+                href="/speaking"
                 className="
                   inline-flex items-center justify-center
                   rounded-xl px-6 py-3
@@ -86,7 +94,7 @@ export default function AboutShannonSection() {
                   transition hover:bg-white
                 "
               >
-                Podcast
+                Speaking
               </Link>
             </div>
           </div>

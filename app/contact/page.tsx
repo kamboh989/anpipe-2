@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contact Shannon Smith for speaking inquiries, corporate training, media requests, and partnerships. Most replies within 24–48 hours.",
+     keywords: [
+  "contact neuroscience speaker",
+  "book keynote speaker",
+  "sales training inquiry",
+  "corporate training contact",
+  "neuroscience sales contact",
+  "Shannon Smith contact",
+  "speaker booking request",
+  "neuroscience workshop inquiry"
+],
+
   alternates: { canonical: "/contact" },
   openGraph: {
     title: `Contact | ${site.name}`,

@@ -118,10 +118,7 @@ export default function SpeakingGallerySection() {
           </div>
         </motion.div>
 
-        {/* Optional note */}
-        <p className="mt-6 text-sm text-slate-600">
-          Tip: Use high-quality, well-lit photos (stage, audience, workshop moments) for best impact.
-        </p>
+        
       </div>
     </section>
   );

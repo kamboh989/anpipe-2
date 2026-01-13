@@ -92,7 +92,7 @@ export default function RealResultsSection() {
             {/* CTA */}
             <div className="mt-7">
               <Link
-                href="/apply"
+                href="/contact"
                 className="
                   inline-flex items-center justify-center
                   rounded-xl px-6 py-3

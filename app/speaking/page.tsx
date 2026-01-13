@@ -16,6 +16,19 @@ export const metadata: Metadata = {
   title: "Speaking",
   description:
     "Neuroscience-backed keynotes and workshops for conferences and corporate teams.",
+     keywords: [
+  "neuroscience keynote speaker",
+  "sales keynote speaker",
+  "corporate keynote speaker",
+  "neuroscience of influence",
+  "ethical persuasion keynote",
+  "leadership neuroscience speaker",
+  "conference keynote neuroscience",
+  "sales motivation keynote",
+  "Shannon Smith speaker",
+  "neuroscience speaking topics"
+],
+
   alternates: { canonical: "/speaking" },
   openGraph: {
     title: `Speaking | ${site.name}`,
