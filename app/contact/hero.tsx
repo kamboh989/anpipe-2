@@ -3,10 +3,9 @@
 import { motion } from "framer-motion";
 
 export default function ContactHero() {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 14 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
-  };
+  const fadeUpInitial = { opacity: 0, y: 14 };
+  const fadeUpAnimate = { opacity: 1, y: 0 };
+  const fadeUpTransition = { duration: 0.55, ease: "easeOut" as const };
 
   return (
     <section
@@ -17,7 +16,6 @@ export default function ContactHero() {
         py-16 sm:py-20
       "
     >
-      {/* subtle background glow */}
       <div
         aria-hidden="true"
         className="
@@ -27,22 +25,20 @@ export default function ContactHero() {
       />
 
       <div className="relative mx-auto max-w-4xl px-4 text-center">
-        {/* Overline */}
         <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
+          initial={fadeUpInitial}
+          animate={fadeUpAnimate}
+          transition={fadeUpTransition}
           className="text-sm font-semibold tracking-wide text-slate-700"
         >
           CONTACT
         </motion.p>
 
-        {/* H1 */}
         <motion.h1
           id="contact-hero-title"
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
+          initial={fadeUpInitial}
+          animate={fadeUpAnimate}
+          transition={{ ...fadeUpTransition, delay: 0.06 }}
           className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900"
         >
           Get in Touch With{" "}
@@ -51,22 +47,19 @@ export default function ContactHero() {
           </span>
         </motion.h1>
 
-        {/* Authority line */}
         <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
+          initial={fadeUpInitial}
+          animate={fadeUpAnimate}
+          transition={{ ...fadeUpTransition, delay: 0.12 }}
           className="mt-4 text-lg sm:text-xl text-slate-800"
         >
-          Speaking inquiries, media requests, partnerships, and corporate
-          engagements
+          Speaking inquiries, media requests, partnerships, and corporate engagements
         </motion.p>
 
-        {/* AEO description */}
         <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
+          initial={fadeUpInitial}
+          animate={fadeUpAnimate}
+          transition={{ ...fadeUpTransition, delay: 0.18 }}
           className="mt-6 text-base sm:text-lg leading-relaxed text-slate-700 max-w-3xl mx-auto"
         >
           Use this page to contact Shannon Smith regarding keynote speaking,
@@ -75,15 +68,14 @@ export default function ContactHero() {
           with care.
         </motion.p>
 
-        {/* Guidance line */}
         <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
+          initial={fadeUpInitial}
+          animate={fadeUpAnimate}
+          transition={{ ...fadeUpTransition, delay: 0.24 }}
           className="mt-6 text-sm sm:text-base text-slate-600"
         >
-          For faster responses, please include your event type, date, audience
-          size, and goals.
+          For faster responses, please include your event type, date, audience size,
+          and goals.
         </motion.p>
       </div>
     </section>

@@ -70,7 +70,6 @@ export default function ContactFAQSection() {
     []
   );
 
-  // AEO: FAQPage schema for rich results
   const faqSchema = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -85,16 +84,6 @@ export default function ContactFAQSection() {
   );
 
   const [open, setOpen] = useState<number>(0);
-
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.06 } },
-  };
-
-  const row = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
-  };
 
   return (
     <section
@@ -111,14 +100,12 @@ export default function ContactFAQSection() {
       />
 
       <div className="mx-auto max-w-5xl px-4">
-        {/* Heading */}
         <div className="text-center max-w-3xl mx-auto">
           <h2
             id="contact-faq-title"
             className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
           >
-            Contact{" "}
-            <span className="text-pink-600">FAQ</span>
+            Contact <span className="text-pink-600">FAQ</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
             Quick answers to common questions about speaking engagements and NeuroSell
@@ -126,12 +113,7 @@ export default function ContactFAQSection() {
           </p>
         </div>
 
-        {/* Accordion */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.18 }}
+        <div
           className="
             mt-10 overflow-hidden
             rounded-2xl bg-white/70
@@ -145,7 +127,10 @@ export default function ContactFAQSection() {
             return (
               <motion.div
                 key={f.q}
-                variants={row}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.18 }}
+                transition={{ duration: 0.45, ease: "easeOut", delay: i * 0.06 }}
                 className="border-t border-black/10 first:border-t-0"
               >
                 <button
@@ -197,7 +182,7 @@ export default function ContactFAQSection() {
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

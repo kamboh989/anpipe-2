@@ -56,17 +56,11 @@ const plannerPoints = [
   "Always focuses on engagement of the audience",
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
-};
-
 export default function SpeakingTopicsSection() {
+  const itemInitial = { opacity: 0, y: 16 };
+  const itemInView = { opacity: 1, y: 0 };
+  const itemTransition = { duration: 0.55, ease: "easeOut" as const };
+
   return (
     <section
       aria-labelledby="topics-title"
@@ -84,11 +78,9 @@ export default function SpeakingTopicsSection() {
             id="topics-title"
             className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
           >
-            Most Requested{" "}
-            <span className="text-pink-600">Speaking Topics</span>
+            Most Requested <span className="text-pink-600">Speaking Topics</span>
           </h2>
 
-          {/* AEO direct answer */}
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
             All topics below are designed to inspire, motivate, and drive attendees
             to further their success. Keynotes can be delivered as part of a speaker
@@ -98,17 +90,14 @@ export default function SpeakingTopicsSection() {
         </div>
 
         {/* Topics Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.18 }}
-          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {topics.map((t) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {topics.map((t, idx) => (
             <motion.article
               key={t.n}
-              variants={item}
+              initial={itemInitial}
+              whileInView={itemInView}
+              viewport={{ once: true, amount: 0.18 }}
+              transition={{ ...itemTransition, delay: idx * 0.08 }}
               className="
                 group relative
                 rounded-2xl bg-white/70
@@ -119,7 +108,6 @@ export default function SpeakingTopicsSection() {
                 hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)]
               "
             >
-              {/* number pill */}
               <div className="flex items-start justify-between gap-4">
                 <span
                   className="
@@ -133,7 +121,6 @@ export default function SpeakingTopicsSection() {
                   {t.n}
                 </span>
 
-                {/* tiny hover underline accent */}
                 <span
                   aria-hidden="true"
                   className="
@@ -154,13 +141,13 @@ export default function SpeakingTopicsSection() {
               </p>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
 
         {/* Event Planners block */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
+          transition={{ duration: 0.55, ease: "easeOut" as const }}
           viewport={{ once: true, amount: 0.18 }}
           className="
             mt-14
@@ -171,18 +158,25 @@ export default function SpeakingTopicsSection() {
           "
         >
           <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
-            Why Event Planners{" "}
-            <span className="text-pink-600">Love</span> Working With Shannon
+            Why Event Planners <span className="text-pink-600">Love</span> Working With
+            Shannon
           </h3>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {plannerPoints.map((p) => (
-              <div key={p} className="flex gap-3">
+            {plannerPoints.map((p, idx) => (
+              <motion.div
+                key={p}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.18 }}
+                transition={{ duration: 0.45, ease: "easeOut" as const, delay: idx * 0.05 }}
+                className="flex gap-3"
+              >
                 <CheckCircle2 className="h-5 w-5 text-pink-600 mt-0.5" />
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
                   {p}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Users,
-  Briefcase,
-  Flame,
-  Network,
-} from "lucide-react";
+import { Users, Briefcase, Flame, Network } from "lucide-react";
 
 const items = [
   {
@@ -32,25 +27,11 @@ Perfect for large stages, multi-track events, and association conferences.`,
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const card = {
-  hidden: { opacity: 0, y: 18 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
 export default function SpeakingFormatsSection() {
+  const cardInitial = { opacity: 0, y: 18 };
+  const cardInView = { opacity: 1, y: 0 };
+  const cardTransition = { duration: 0.55, ease: "easeOut" as const };
+
   return (
     <section
       aria-labelledby="speaking-formats-title"
@@ -61,7 +42,6 @@ export default function SpeakingFormatsSection() {
         text-white
       "
     >
-      {/* subtle background glow */}
       <div
         aria-hidden="true"
         className="
@@ -71,7 +51,6 @@ export default function SpeakingFormatsSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        {/* Optional heading (AEO) */}
         <div className="max-w-2xl">
           <h2
             id="speaking-formats-title"
@@ -80,22 +59,19 @@ export default function SpeakingFormatsSection() {
             Where Shannon Speaks
           </h2>
           <p className="mt-3 text-white/70 text-base sm:text-lg leading-relaxed">
-            Formats designed for conferences, corporate teams, panels, and professional organizations.
+            Formats designed for conferences, corporate teams, panels, and professional
+            organizations.
           </p>
         </div>
 
-        {/* Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {items.map(({ title, desc, Icon }) => (
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map(({ title, desc, Icon }, idx) => (
             <motion.article
               key={title}
-              variants={card}
+              initial={cardInitial}
+              whileInView={cardInView}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ ...cardTransition, delay: idx * 0.12 }}
               className="
                 group relative
                 rounded-2xl
@@ -108,7 +84,6 @@ export default function SpeakingFormatsSection() {
                 hover:border-white/20
               "
             >
-              {/* glow on hover */}
               <div
                 aria-hidden="true"
                 className="
@@ -144,7 +119,7 @@ export default function SpeakingFormatsSection() {
               </div>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

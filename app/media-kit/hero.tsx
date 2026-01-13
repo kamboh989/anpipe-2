@@ -3,22 +3,22 @@
 import { motion } from "framer-motion";
 
 export default function MediaKitHero() {
-  const container = {
-    hidden: {},
-    show: {
-      transition: { staggerChildren: 0.08 },
-    },
-  };
+  const fadeUpInitial = { opacity: 0, y: 16 };
+  const fadeUpAnimate = { opacity: 1, y: 0 };
+  const fadeUpTransition = { duration: 0.6, ease: "easeOut" as const };
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  };
+  const listItemInitial = { opacity: 0, y: 10 };
+  const listItemAnimate = { opacity: 1, y: 0 };
+  const listItemTransition = { duration: 0.45, ease: "easeOut" as const };
 
-  const listItem = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
-  };
+  const items = [
+    "Professional bio & speaker introduction copy",
+    "Most requested speaking topics",
+    "High-resolution headshots & brand assets",
+    "Event formats & customization options",
+    "Past experience & audience impact",
+    "Booking & logistics overview",
+  ];
 
   return (
     <section
@@ -29,7 +29,6 @@ export default function MediaKitHero() {
         py-14 sm:py-18
       "
     >
-      {/* subtle background glow */}
       <div
         aria-hidden="true"
         className="
@@ -40,10 +39,10 @@ export default function MediaKitHero() {
 
       <div className="relative mx-auto max-w-7xl px-4">
         <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
           className="
             mx-auto max-w-6xl
             rounded-3xl bg-white/70 backdrop-blur
@@ -54,7 +53,10 @@ export default function MediaKitHero() {
         >
           {/* Overline */}
           <motion.p
-            variants={fadeUp}
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.02 }}
             className="text-sm font-semibold tracking-wide text-slate-700"
           >
             MEDIA KIT
@@ -63,7 +65,10 @@ export default function MediaKitHero() {
           {/* H1 */}
           <motion.h1
             id="media-kit-hero-title"
-            variants={fadeUp}
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.08 }}
             className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900"
           >
             Shannon Smith,{" "}
@@ -74,58 +79,63 @@ export default function MediaKitHero() {
 
           {/* Role line */}
           <motion.p
-            variants={fadeUp}
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.14 }}
             className="mt-4 text-lg sm:text-xl text-slate-800"
           >
             Neuroscience Speaker <span className="text-slate-400">|</span> Sales
-            Keynote <span className="text-slate-400">|</span> Corporate
-            Performance Strategist
+            Keynote <span className="text-slate-400">|</span> Corporate Performance
+            Strategist
           </motion.p>
 
           {/* AEO direct answer */}
           <motion.p
-            variants={fadeUp}
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.2 }}
             className="mt-5 text-base sm:text-lg leading-relaxed text-slate-700"
           >
-            This media kit provides event organizers, conference planners, and
-            brands with everything they need to introduce Shannon Smith, select
-            the right topic, and plan a successful keynote or workshop.
+            This media kit provides event organizers, conference planners, and brands
+            with everything they need to introduce Shannon Smith, select the right
+            topic, and plan a successful keynote or workshop.
           </motion.p>
 
           {/* Included list */}
-          <motion.div variants={fadeUp} className="mt-8">
+          <motion.div
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.26 }}
+            className="mt-8"
+          >
             <p className="text-sm font-bold text-slate-900">Inside the Media Kit:</p>
 
-            <motion.ul
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-              className="mt-4 grid gap-3 sm:grid-cols-2"
-            >
-              {[
-                "Professional bio & speaker introduction copy",
-                "Most requested speaking topics",
-                "High-resolution headshots & brand assets",
-                "Event formats & customization options",
-                "Past experience & audience impact",
-                "Booking & logistics overview",
-              ].map((t) => (
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {items.map((t, idx) => (
                 <motion.li
                   key={t}
-                  variants={listItem}
+                  initial={listItemInitial}
+                  whileInView={listItemAnimate}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ ...listItemTransition, delay: 0.32 + idx * 0.08 }}
                   className="flex gap-3 text-slate-800"
                 >
                   <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
                   <span className="text-sm sm:text-base leading-relaxed">{t}</span>
                 </motion.li>
               ))}
-            </motion.ul>
+            </ul>
           </motion.div>
 
           {/* Trust line */}
           <motion.p
-            variants={fadeUp}
+            initial={fadeUpInitial}
+            whileInView={fadeUpAnimate}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ ...fadeUpTransition, delay: 0.42 }}
             className="mt-8 text-sm sm:text-base text-slate-600"
           >
             Trusted by leaders across technology, retail, energy, telecom, and

@@ -14,34 +14,28 @@ const kits = [
   {
     title: "Corporate Training Kit",
     desc: "Training overview, workshop options, outcomes, and customization details for organizations.",
-     preview: "/mediaKit/p2.png",
+    preview: "/mediaKit/p2.png",
     download: "/mediaKit/p2.png",
   },
   {
     title: "Podcast & Interview Kit",
     desc: "Host-ready bio, talking points, suggested questions, and interview assets.",
-      preview: "/mediaKit/p3.png",
+    preview: "/mediaKit/p3.png",
     download: "/mediaKit/p3.png",
   },
   {
     title: "Brand & Partnership Kit",
     desc: "Brand positioning, collaboration opportunities, audience alignment, and partnership details.",
-     preview: "/mediaKit/p4.jpeg",
+    preview: "/mediaKit/p4.jpeg",
     download: "/mediaKit/p4.jpeg",
   },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
-
-const card = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 export default function MediaKitsPreviewSection() {
+  const cardInitial = { opacity: 0, y: 18 };
+  const cardInView = { opacity: 1, y: 0 };
+  const cardTransition = { duration: 0.6, ease: "easeOut" as const };
+
   return (
     <section
       aria-labelledby="media-kits-preview-title"
@@ -57,29 +51,24 @@ export default function MediaKitsPreviewSection() {
             id="media-kits-preview-title"
             className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
           >
-            Media Kit{" "}
-            <span className="text-pink-600">Previews</span>
+            Media Kit <span className="text-pink-600">Previews</span>
           </h2>
 
-          {/* AEO direct answer */}
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
             Preview each media kit below. Download the kit you need to quickly
             introduce Shannon, select topics, and plan a successful event.
           </p>
         </div>
 
-        {/* Kits (one kit per row - big & clear) */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.18 }}
-          className="mt-12 space-y-12"
-        >
-          {kits.map((k) => (
+        {/* Kits */}
+        <div className="mt-12 space-y-12">
+          {kits.map((k, idx) => (
             <motion.article
               key={k.title}
-              variants={card}
+              initial={cardInitial}
+              whileInView={cardInView}
+              viewport={{ once: true, amount: 0.18 }}
+              transition={{ ...cardTransition, delay: idx * 0.12 }}
               className="
                 group
                 rounded-3xl bg-white/70 backdrop-blur
@@ -91,7 +80,6 @@ export default function MediaKitsPreviewSection() {
               <div className="grid gap-8 lg:grid-cols-2">
                 {/* LEFT: Preview */}
                 <div className="relative bg-white">
-                  {/* fixed preview area (no scrollbars) */}
                   <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[520px]">
                     <Image
                       src={k.preview}
@@ -108,7 +96,6 @@ export default function MediaKitsPreviewSection() {
                     />
                   </div>
 
-                  {/* subtle bottom gradient line */}
                   <div
                     aria-hidden="true"
                     className="
@@ -130,9 +117,7 @@ export default function MediaKitsPreviewSection() {
                     {k.desc}
                   </p>
 
-                  {/* Actions */}
                   <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                    {/* Download */}
                     <a
                       href={k.download}
                       download
@@ -150,7 +135,6 @@ export default function MediaKitsPreviewSection() {
                       Download PNG
                     </a>
 
-                    {/* Open full preview */}
                     <a
                       href={k.preview}
                       target="_blank"
@@ -176,7 +160,7 @@ export default function MediaKitsPreviewSection() {
               </div>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
