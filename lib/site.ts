@@ -34,7 +34,7 @@ export const site = {
   author: {
     name: "Shannon Smith",
     suffix: "J.D., M.S.",
-    jobTitle: "Neuroscience Speaker",
+    jobTitle: "Neuroscience Speaker & Trainer",
   },
 
   organization: {
