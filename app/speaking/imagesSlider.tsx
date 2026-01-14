@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const images = [
   { src: "/speak/s1.jpg", alt: "Keynote moment on stage" },
-  { src: "/speak/s2.jpg", alt: "Workshop training with teams" },
-  { src: "/speak/s3.jpg", alt: "Audience engagement during talk" },
+  { src: "/speak/s2.JPG", alt: "Workshop training with teams" },
+  { src: "/speak/s3.JPG", alt: "Audience engagement during talk" },
   { src: "/speak/s4.jpg", alt: "Corporate event speaking session" },
   { src: "/speak/s5.png", alt: "Panel discussion / fireside chat" },
 ];
