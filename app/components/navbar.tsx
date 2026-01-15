@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Speaking", href: "/speaking" },
   { label: "Media Kit", href: "/media-kit" },
-  { label: "Post", href: "/post" },
+  { label: "Posts", href: "/post" },
   { label: "Contact", href: "/contact" },
 ];
 

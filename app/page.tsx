@@ -22,8 +22,8 @@ const page = () => {
       <Result />
       <Help />
       <About />
-      <Def />
       <Feedback />
+      <Def />
       <FAQSection />
     </div>
   )

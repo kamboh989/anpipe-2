@@ -11,6 +11,7 @@ import  Topic  from "./topic";
 import  Faq  from "./faq";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import Video from "./video";
 
 export const metadata: Metadata = {
   title: "Speaking",
@@ -44,9 +45,10 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <Content />
       <Image />
     <HeroScrollDemo />
+      <Content />
+      <Video />
     <Bio />
     <Cards />
     <Slider />

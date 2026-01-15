@@ -18,46 +18,29 @@ export default function ContactAuthoritySection() {
 
         {/* AEO direct answer */}
         <p className="mt-4 max-w-3xl text-base sm:text-lg leading-relaxed text-slate-700">
-          Shannon Smith is a neuroscience-based sales and communication trainer who
-          has coached over <strong>200,000 professionals</strong> across Fortune
-          500 companies, startups, and solo founders worldwide.
+          Coached and trained 200k+ employees at multiple fortune 500 companies
         </p>
 
         {/* Key credibility points */}
         <div className="mt-8 space-y-6 max-w-4xl">
           <p className="text-base sm:text-lg text-slate-800">
-            She has helped hundreds of solopreneurs and startup founders build
-            sales confidence, close their first deals, and create repeatable,
-            ethical sales systems.
+           Helped hundreds of solopreneurs and startup founders improve sales confidence and be better at sales
+           <br />
+- First sale within 30 days
+<br />
+- 225% increase in 3 months 
+<br />
+
+Delivered 300+ live workshops and trainings
           </p>
 
-          {/* Results list */}
-          <ul className="space-y-3 text-slate-800">
-            <li className="flex gap-3">
-              <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-              <span>
-                Achieved a <strong>first sale within 30 days</strong> for new founders.
-              </span>
-            </li>
-
-            <li className="flex gap-3">
-              <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-              <span>
-                Drove an average <strong>225% revenue increase in 3 months</strong>.
-              </span>
-            </li>
-          </ul>
+         
 
           <p className="text-base sm:text-lg text-slate-800">
-            Shannon has delivered over <strong>300 live workshops and trainings</strong>,
-            helping teams improve communication, emotional regulation, and
-            decision-making under pressure.
+           Trusted by leaders across tech, retail, power, energy, telecom and more
           </p>
 
-          <p className="text-base sm:text-lg text-slate-800">
-            Her work is trusted by leaders across <strong>technology, retail,
-            power, energy, telecom</strong>, and other high-performance industries.
-          </p>
+        
         </div>
       </div>
     </section>

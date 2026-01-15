@@ -7,7 +7,7 @@ const links = [
   { label: "Home", href: "/" },
   { label: "Speaking", href: "/speaking" },
   { label: "media Kit", href: "/media-kit" },
-  { label: "Post", href: "/post" },
+  { label: "Posts", href: "/post" },
   { label: "Contact", href: "/contact" },
 ];
 

@@ -76,7 +76,9 @@ export default function Hero() {
             {/* CTA (UPDATED) */}
             <div className="mt-7">
               <Link
-                href="/contact"
+                href="https://synaptic-solutions.kit.com/newsletter"
+                target="blank"
+                
                 className="
                   inline-flex items-center justify-center
                   rounded-xl px-6 py-3

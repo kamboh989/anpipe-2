@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -24,8 +23,8 @@ export default function SpeakingHero() {
       aria-labelledby="speaking-hero-title"
       className="
         relative overflow-hidden
-        bg-[linear-gradient(120deg,#ffffff_0%,#fff1f7_55%,#ffffff_100%)]
-        py-12 sm:py-14
+        bg-white
+        py-14 sm:py-20
       "
     >
       <Script
@@ -35,40 +34,53 @@ export default function SpeakingHero() {
       />
 
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid gap-10 lg:grid-cols-2 items-start">
-          {/* LEFT: Content */}
-          <div className="max-w-xl">
-            {/* Overline */}
-            <p className="text-sm font-semibold text-slate-700">
+        {/* Centered wrapper */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            {/* Optional overline (agar screenshot me nahi chahiye to remove kar dein) */}
+            <p className="text-sm font-semibold tracking-wide text-slate-600">
               Keynote Speaker & Corporate Trainer
             </p>
 
-            {/* H1 (AEO) */}
+            {/* Main Title (Screenshot style) */}
             <h1
               id="speaking-hero-title"
-              className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900"
+              className="
+                mt-5
+                text-slate-900
+                font-semibold
+                leading-[0.95]
+                tracking-tight
+                text-5xl sm:text-6xl lg:text-7xl
+              "
             >
-              The Expert:
-              <br />
-              Shannon Smith, J.D., M.S.
+              <span className="block">The Expert:</span>
+              <span className="block mt-3 font-semibold">
+                Shannon Smith, J.D.,
+              </span>
+              <span className="block font-semibold">M.S.</span>
             </h1>
 
-            {/* Subheading */}
-            <p className="mt-4 text-lg sm:text-xl text-slate-800">
-              Neuroscience Speaker <span className="text-slate-400">|</span>{" "}
-              Sales Keynote <span className="text-slate-400">|</span> Corporate
-              Performance Strategist
+            {/* Descriptor line (Screenshot jaisi single line / wrap nicely) */}
+            <p
+              className="
+                mt-6
+                text-slate-900
+                text-xl sm:text-2xl
+                leading-snug
+                max-w-3xl
+              "
+            >
+              Neuroscience Speaker{" "}
+              <span className="text-slate-400">|</span> Sales Keynote{" "}
+              <span className="text-slate-400">|</span> Corporate Performance
+              Strategist
             </p>
 
-            {/* Direct Answer paragraph (AI snippet friendly) */}
-            <p className="mt-5 text-base sm:text-lg leading-relaxed text-slate-700">
-              Shannon delivers neuroscience-backed keynotes that help sales teams,
-              leaders, and organizations improve decision-making, communication,
-              and performance—without pressure, manipulation, or burnout.
-            </p>
+           
 
-            {/* Buttons */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            {/* CTA */}
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="/contact"
                 className="
@@ -83,7 +95,6 @@ export default function SpeakingHero() {
               >
                 Book Shannon to Speak
               </Link>
-
             </div>
 
             {/* Microcopy */}
@@ -91,23 +102,6 @@ export default function SpeakingHero() {
               Available for conferences, leadership events, and corporate sales teams.
             </p>
           </div>
-{/* RIGHT: Image */}
-<div className="flex justify-center lg:justify-end">
-  <Image
-    src="/speak/hero.jpg"
-    alt="Shannon Smith speaking on stage"
-    width={520}
-    height={440}
-    priority
-    className="
-      rounded-2xl
-      object-contain
-      max-h-[450px]
-      w-auto
-    "
-  />
-</div>
-
         </div>
       </div>
     </section>

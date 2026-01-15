@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from "./hero";
+// import Hero from "./hero";
 import Kits from "./kits";
 import  Faq  from "./faq";
 import type { Metadata } from "next";
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div>
-        <Hero />   
+        {/* <Hero />    */}
         <Kits />
         <Faq />
     </div>

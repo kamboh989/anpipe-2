@@ -26,19 +26,10 @@ export default function BioSection() {
 
           {/* AEO direct answer */}
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700 max-w-4xl">
-            Shannon is an expert in consumer psychology, sales strategy, applied
-            neuroscience, and buyer behavior. She is a HarvardX Verified
-            Neuroscience Researcher and has spent nearly two decades helping
-            individuals and organizations understand how the brain drives
-            performance, decision-making, and sales outcomes.
+           Shannon is an expert in consumer psychology, sales strategy, applied neuroscience and buyer behavior. She is a HarvardX Verified Neuroscience Researcher. She’s been helping people understand their brain in all different verticals and industries, from startup to enterprise, including Microsoft, for ~20 years by teaching them how to tap into our brain and optimize the brain for better performance.
           </p>
 
-          <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700 max-w-4xl">
-            Her work spans startups to enterprise organizations—including
-            Microsoft—where she teaches leaders, sales teams, and founders how
-            to optimize the brain for clarity, confidence, and consistent
-            results under pressure.
-          </p>
+          
 
           {/* Expertise list */}
           <div className="mt-8">
@@ -68,26 +59,14 @@ export default function BioSection() {
           {/* Brand & impact */}
           <div className="mt-8 space-y-4 max-w-4xl text-base sm:text-lg text-slate-700">
             <p>
-              Shannon is an expert in building profitable brands and businesses
-              through LinkedIn. She helps clients establish brain-based sales
-              systems while simultaneously growing personal brands—because a
-              strong personal brand creates immediate sales opportunities for
-              any business you want to start, support, or invest in.
+              She's an expert in establishing a profitable brand and business via Linkedin and helps her clients not only establish brain-based sales systems but she also helps them to grow their own personal brands. Afterall, a good personal brand = immediate sales for any business you want to start, support or invest in. 
             </p>
 
             <p>
-              She volunteers at Venture Mechanics, a Seattle/Bellevue-based
-              startup accelerator, where she helps founders improve sales
-              effectiveness. Shannon also developed a mobile gaming app based on
-              neuroscience research that helps change habits through play.
+              Shannon volunteers at Venture Mechanics, a Seattle/Bellevue-based startup accelerator to help founders be more effective in sales. Shannon developed a mobile gaming app based on neuroscience research that changes your habits while you play and is also partnering to create an agentic AI model that predicts sales team performance (kind of like the minority report for sales teams). She is a captain, loves to sail and lives in the PNW. 
             </p>
 
-            <p>
-              In addition, she is partnering to build an agentic AI model that
-              predicts sales team performance—similar to a “Minority Report”
-              system for sales organizations. Outside of work, Shannon is a
-              captain, loves to sail, and lives in the Pacific Northwest.
-            </p>
+          
           </div>
 
           {/* CTA */}

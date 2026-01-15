@@ -51,19 +51,7 @@ export default function SpeakingFormatsSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        <div className="max-w-2xl">
-          <h2
-            id="speaking-formats-title"
-            className="text-3xl sm:text-4xl font-extrabold tracking-tight"
-          >
-            Where Shannon Speaks
-          </h2>
-          <p className="mt-3 text-white/70 text-base sm:text-lg leading-relaxed">
-            Formats designed for conferences, corporate teams, panels, and professional
-            organizations.
-          </p>
-        </div>
-
+        
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map(({ title, desc, Icon }, idx) => (
             <motion.article

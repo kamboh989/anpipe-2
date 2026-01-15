@@ -1,23 +1,26 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import Image from "next/image";
 import Script from "next/script";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
 
 type Review = {
   name: string;
-  
-  avatar?: string; // optional: /avatars/a.png
-  rating: number; // 1-5
+  avatar?: string;
+  rating: number;
   text: string;
+};
+
+type VideoBlock = {
+  quote: string;
+  name: string;
+  youtubeId: string; // e.g. "CJnDfNADgN0"
 };
 
 export default function ClientFeedbackSection() {
   const reviews: Review[] = useMemo(
     () => [
-      {
+       {
         name: "Rene Madden",
         avatar: "/t1.jpeg",
         rating: 5,
@@ -51,7 +54,7 @@ export default function ClientFeedbackSection() {
         name: "Ryan Sailstad",
         avatar: "/t6.jpeg",
         rating: 5,
-        text: "IShannon is the real deal. She teaches you how to show up as yourself—authentically and confidently—in a space that often rewards sameness. She’s got the background, the receipts, and knows how to make a sale without selling out. Watching her in action is both inspiring and practical. If you're looking to level up on LinkedIn or just get clear on your voice, she's someone worth learning from. I walked away with tools I still use and insights that stuck.",
+        text: "Shannon is the real deal. She teaches you how to show up as yourself—authentically and confidently—in a space that often rewards sameness. She’s got the background, the receipts, and knows how to make a sale without selling out. Watching her in action is both inspiring and practical. If you're looking to level up on LinkedIn or just get clear on your voice, she's someone worth learning from. I walked away with tools I still use and insights that stuck.",
       },
       {
         name: "Kristen Long",
@@ -65,19 +68,19 @@ export default function ClientFeedbackSection() {
         rating: 5,
         text: "Shannon practices what she preaches. She is very knowledgeable about the psychology of sales and a lot of other useful skills. She is easy to work with and is genuinely interested in helping others.",
       },
-       {
+      {
         name: "Dave Larsen",
         avatar: "/t9.jpeg",
         rating: 5,
         text: "Shannon is a fantastic person to work with and to have working on your project or helping you. She is highly intelligent and an excellent communicator. She projects genuine enthusiasm that motivates her listeners, but she is not over the top and exhausting. Her information is fascinating, beneficial, and valuable both to individuals and businesses. My final analysis is that choosing to work with Shannon means partnering with someone who embodies intelligence, clarity, and genuine enthusiasm.",
       },
-       {
+      {
         name: "Katie Wrigley",
         avatar: "/t10.jpeg",
         rating: 5,
         text: "I attended Peek Into the Buyer’s Mind with Shannon Smith and was blown away by how much value she delivered. Unlike most events that just teas the good stuff, Shan gave actionable tools, fresh ideas, and worksheets to help you clearly define and find your ideal client—especially on LinkedIn. Her approach is generous, insightful, and pressure-free. Highly recommend if you're ready to connect more deeply to earn more clients.",
       },
-        {
+      {
         name: "Louis Bigger",
         avatar: "/t11.jpeg",
         rating: 5,
@@ -95,25 +98,93 @@ export default function ClientFeedbackSection() {
         rating: 5,
         text: "I enjoyed learning from Shannon in her “Buyer's Brain Event”! It was a business game changer for anyone serious to sale how is supposed to be. She is an expert in overcoming rejections and how to use cognitive flexibility in favor.",
       },
-       {
+      {
         name: "Jake Ray",
-        role: "Sales Consultant",
         avatar: "/t14.jpeg",
         rating: 5,
         text: "Shannon practices what she preaches. She is very knowledgeable about the psychology of sales and a lot of other useful skills. She is easy to work with and is genuinely interested in helping others.",
       },
-       {
+      {
         name: "Alexandra Nunez",
-        role: "Sales Consultant",
         avatar: "/t15.jpeg",
         rating: 5,
         text: "I attended one of Shannon's workshops, she provided great value. I learned sales through psychology and neuroscience in a way that is practical and easy to understand. Shannon explains the \"why\" behind the techniques, which makes a big difference. I left with a better understanding of how to connect with people and approach sales in a smart way. If you have the chance to work with Shannon or attend her workshop, do it. You will gain insights that you can apply right away.",
+      },
+       {
+        name: "Robert Tapinksi",
+        avatar: "/t16.png",
+        rating: 5,
+        text: "She was fantastic to work with and she shared a vast amount of knowledge with me, She is very talented!!.",
+      },
+       {
+        name: "Leah Garcia",
+        avatar: "/t17.png",
+        rating: 5,
+        text: "I enjoy the pleasure of attending The Peek into the Buyer's Brain with the incredible Shannon Smith. I've been in sales for nearly 20 years and the strategies she shared in this two day event were absolutely transformational. Shannon has a unique perspective on the sales process. We have to understand how our brain works and how we process information. She also makes the class fun and engaging. This isn't a typical lecture type of environment. You will definitely grab some golden nuggets!.",
+      },
+       {
+        name: "Rachael lemon",
+        avatar: "/t18.png",
+        rating: 5,
+        text: "Working with Shannon was brilliant- she brings fun energy backed up with experience She knows her stuff and thinks outside the box, what she teaches isn’t the same old generic fluff it’s creative and targeted to meet my business needs She also provides constant value in her daily content Turning marketing from feeling uncomfortable and sleazy to easy peasy 🍋 squeezed!",
+      },
+       {
+        name: "Sarah McDonald",
+        avatar: "/t19.png",
+        rating: 5,
+        text: "I could never wrap my head around the sales stuff. Shannon helped me realize its not that complicated and now I have a coaching business that's thriving.fantastic to work with and she shared a vast amount of knowledge with me, She is very talented!!",
+      },
+       {
+        name: "Imole Ashogbon",
+        avatar: "/t20.png",
+        rating: 5,
+        text: "Shannon's two-day workshop was really great! You can see her passion for what she shares, she delivers a lot of value to the attendees and it is really interactive the way she runs it. If you are looking for someone that can help you with your sales and that can make a difference, go attend one of her webinars to introduce yourself to her world. Totally worth it.",
+      },
+       {
+        name: "Anatanas Budvytis",
+        avatar: "/t21.png",
+        rating: 5,
+        text: "Shannon was great, and easy to work with. She always brings an energy with her that makes working with her fun and exciting.",
+      },
+       {
+        name: "Steffan Surdek",
+        avatar: "/t22.png",
+        rating: 5,
+        text: "Shannon's two-day workshop was really great! You can see her passion for what she shares, she delivers a lot of value to the attendees and it is really interactive the way she runs it. If you are looking for someone that can help you with your sales and that can make a difference, go attend one of her webinars to introduce yourself to her world. Totally worth it.",
+      },
+      {
+        name: "Emmy Charles",
+        avatar: "/t23.png",
+        rating: 5,
+        text: "I attended one of Shannon's sales masterclass webinars. If I could describe it in one word: AMAZING. Not only does she know what she's talking about, she knows how to make you know what you're thinking about. I filled key gaps in my sales strategy using what I learned. If you're on the fence about Shannon don't be. She's worth it.",
+      },
+       {
+        name: "Paul Deitch",
+        avatar: "/t24.png",
+        rating: 5,
+        text: "It's been refreshing getting to connect and work with Shannon. From our first coffee chat a month ago to her inviting me to her 2-Day Workshop teaching people about how to incorporate neuroscience and psychology to increase their sales. She taught me an invaluable lesson that most people can tell you \"what\" to do, but they can't explain how to do it and why it works! I highly recommend anyone who's interested in neuroscience or creating systems for their business to speak with Shannon.",
       },
     ],
     []
   );
 
-  // AEO: Review schema (short, compliant)
+  // ✅ 2 videos only (6 testimonials ke baad, phir next 6 ke baad)
+  const videoBlocks: VideoBlock[] = useMemo(
+  () => [
+    {
+      quote: "I'll be coming back to these resources again and again.",
+      name: "Georgie Smith",
+      youtubeId: "1IdowWR7tgs", // first video
+    },
+    {
+      quote: "There's no reason to not take the opportunity.",
+      name: "Christine Snell",
+      youtubeId: "S0PqpOhBvqY", // second video
+    },
+  ],
+  []
+);
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -129,22 +200,67 @@ export default function ClientFeedbackSection() {
     })),
   };
 
-  // pagination for desktop 3, tablet 2, mobile 1 (handled via CSS; logic slides in groups of 3)
-  const pageSize = 3;
-  const totalPages = Math.ceil(reviews.length / pageSize);
-  const [page, setPage] = useState(0);
+  // ✅ Helper: video section UI (screenshot style)
+  function VideoQuoteSection({ block }: { block: VideoBlock }) {
+    return (
+      <div className="md:col-span-2 lg:col-span-3">
+        <div className="rounded-3xl border border-gray-200 bg-white p-6 sm:p-8">
+          <div className="grid gap-8 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+            {/* Left Quote */}
+            <div>
+              <p className="text-xl sm:text-2xl font-semibold tracking-tight text-slate-900">
+                &quot;{block.quote}&quot;
+              </p>
+              <p className="mt-6 text-base font-semibold text-slate-900">
+                {block.name}
+              </p>
+            </div>
 
-  const goPrev = () => setPage((p) => (p - 1 + totalPages) % totalPages);
-  const goNext = () => setPage((p) => (p + 1) % totalPages);
+            {/* Right Video */}
+            <div className="flex justify-center md:justify-end">
+              <div className="w-full max-w-[360px] overflow-hidden rounded-2xl border border-gray-200 bg-black shadow-sm">
+                <div className="aspect-video w-full">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube.com/embed/${block.youtubeId}`}
+                    title={`${block.name} video testimonial`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-  const start = page * pageSize;
-  const visible = reviews.slice(start, start + pageSize);
+  // ✅ Insert video after 6th and 12th review (only if video exists)
+  const renderItems = useMemo(() => {
+    const out: Array<
+      | { type: "review"; review: Review; key: string }
+      | { type: "video"; block: VideoBlock; key: string }
+    > = [];
+
+    reviews.forEach((r, idx) => {
+      out.push({ type: "review", review: r, key: `r-${r.name}-${idx}` });
+
+      // after 6 and 12 (i.e. idx 5 and 11)
+      const after = idx + 1;
+      if (after === 6 && videoBlocks[0]) {
+        out.push({ type: "video", block: videoBlocks[0], key: "v-1" });
+      }
+      if (after === 12 && videoBlocks[1]) {
+        out.push({ type: "video", block: videoBlocks[1], key: "v-2" });
+      }
+    });
+
+    return out;
+  }, [reviews, videoBlocks]);
 
   return (
-    <section
-      aria-labelledby="client-feedback-title"
-      className="py-14 sm:py-18 bg-white"
-    >
+    <section aria-labelledby="client-feedback-title" className="py-14 sm:py-18 bg-white">
       <Script
         id="review-schema"
         type="application/ld+json"
@@ -154,120 +270,73 @@ export default function ClientFeedbackSection() {
       <div className="mx-auto max-w-6xl px-4">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto">
-         
-
           <h2
             id="client-feedback-title"
             className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
           >
-            Client{" "}
-            <span className="text-pink-600">FeedBack!</span>{" "}
+            Client <span className="text-pink-600">FeedBack!</span>{" "}
             <span className="align-middle">😊</span>
           </h2>
 
-          {/* AEO: short summary */}
           <p className="mt-3 text-base sm:text-lg text-slate-700">
             Real feedback from clients using ethical persuasion and neuroscience-based
             communication to close more—without pushing harder.
           </p>
-
-        
         </div>
 
-        {/* Cards (3 shown, rest hidden via paging) */}
+        {/* Grid */}
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {visible.map((r, idx) => (
-            <article
-              key={`${r.name}-${idx}`}
-              className="
-                rounded-2xl bg-white
-                p-6 sm:p-7
-                border border-dashed border-pink-300
-                shadow-[0_10px_24px_rgba(0,0,0,0.05)]
-                transition
-                hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(0,0,0,0.07)]
-              "
-            >
-              {/* stars */}
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="text-pink-600 text-sm">
-                    {i < r.rating ? "★" : "☆"}
-                  </span>
-                ))}
-              </div>
+          {renderItems.map((item) => {
+            if (item.type === "video") {
+              return <VideoQuoteSection key={item.key} block={item.block} />;
+            }
 
-              <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700">
-                {r.text}
-              </p>
-
-              <div className="mt-6 flex items-center gap-3">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-black/10 bg-slate-100">
-                  {r.avatar ? (
-                    <Image
-                      src={r.avatar}
-                      alt={`${r.name} avatar`}
-                      fill
-                      className="object-cover"
-                      sizes="40px"
-                    />
-                  ) : null}
+            const r = item.review;
+            return (
+              <article
+                key={item.key}
+                className="
+                  rounded-2xl bg-white
+                  p-6 sm:p-7
+                  border border-dashed border-pink-300
+                  shadow-[0_10px_24px_rgba(0,0,0,0.05)]
+                  transition
+                  hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(0,0,0,0.07)]
+                "
+              >
+                {/* stars */}
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span key={i} className="text-pink-600 text-sm">
+                      {i < r.rating ? "★" : "☆"}
+                    </span>
+                  ))}
                 </div>
 
-                <div>
-                  <p className="text-sm font-extrabold text-slate-900">{r.name}</p>
-                 
+                <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700">
+                  {r.text}
+                </p>
+
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-black/10 bg-slate-100">
+                    {r.avatar ? (
+                      <Image
+                        src={r.avatar}
+                        alt={`${r.name} avatar`}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    ) : null}
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-extrabold text-slate-900">{r.name}</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {/* Controls */}
-        <div className="mt-8 flex items-center justify-center gap-4">
-          <button
-            type="button"
-            onClick={goPrev}
-            className="
-              h-10 w-10 rounded-full
-              ring-1 ring-black/10 bg-gray-200
-              hover:bg-slate-50 transition
-              grid place-items-center
-            "
-            aria-label="Previous reviews"
-          >
-            <ChevronLeft className="h-5 w-5 text-slate-700" />
-          </button>
-
-          {/* dots */}
-          <div className="flex items-center gap-2">
-            {Array.from({ length: totalPages }).map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setPage(i)}
-                aria-label={`Go to reviews page ${i + 1}`}
-                className={`
-                  h-2.5 w-2.5 rounded-full transition
-                  ${page === i ? "bg-pink-600" : "bg-slate-300 hover:bg-slate-400"}
-                `}
-              />
-            ))}
-          </div>
-
-          <button
-            type="button"
-            onClick={goNext}
-            className="
-              h-10 w-10 rounded-full
-              ring-1 ring-black/10 bg-gray-200
-              hover:bg-slate-50 transition
-              grid place-items-center
-            "
-            aria-label="Next reviews"
-          >
-            <ChevronRight className="h-5 w-5 text-slate-700" />
-          </button>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
