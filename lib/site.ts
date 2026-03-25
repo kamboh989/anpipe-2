@@ -1,44 +1,31 @@
 export const site = {
-  name: "brainhacksbyshannon",
-  title: "Neuroscience | brainhacksbyshannon",
+  name: "Anpipe",
+  title: "A.N Industries | Engineering Steel & Industrial Piping",
   description:
-    "Neuroscience-backed speaking and training to help teams build trust, reduce resistance, and improve performance—without pressure.",
+    "A.N Industries - Leading manufacturer of high-quality M.S. and G.I. pipes in Pakistan. Excellence in engineering since 1991.",
 
   keywords: [
-    "neuroscience sales training",
-    "ethical persuasion",
-    "sales psychology",
-    "buyer behavior neuroscience",
-    "neuroscience speaker",
-    "sales performance training",
-    "trust based selling",
-    "neuroscience leadership",
-    "corporate sales training",
-    "Shannon Smith neuroscience",
+    "A.N Industries",
+    "Steel Pipes",
+    "GI Pipes",
+    "MS Pipes",
+    "Engineering Steel",
+    "Industrial Piping",
+    "Lahore, Pakistan",
+    
   ],
 
-  url: "https://brainhacksbyshannon.com",
+ 
 
-  ogImage: "/og.jpeg",
+  
 
   /** ✅ FAVICONS */
   favicon: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+  
   },
 
-  twitter: "@brainhacksbyshannon",
-  locale: "en_US",
+ 
 
-  author: {
-    name: "Shannon Smith",
-    suffix: "J.D., M.S.",
-    jobTitle: "Neuroscience Speaker & Trainer",
-  },
-
-  organization: {
-    legalName: "brainhacksbyshannon",
-    sameAs: ["https://www.linkedin.com/in/shannonsmithjdms/"],
-  },
 };
