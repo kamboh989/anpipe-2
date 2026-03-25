@@ -1,111 +1,78 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProgramObjectivesSection() {
   return (
     <section
       aria-labelledby="program-objectives-title"
-      className="
-        py-14 sm:py-18
-        bg-[linear-gradient(120deg,#ffffff_0%,#fff1f7_55%,#ffffff_100%)]
-      "
+      className="relative overflow-hidden bg-[#020817] py-16 sm:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-5xl px-4">
-        <div
-          className="
-            grid gap-8 md:grid-cols-2
-            items-center
-            rounded-2xl
-            border border-dashed border-pink-300
-            bg-white/70
-            p-3 sm:p-8
-            shadow-[0_10px_24px_rgba(0,0,0,0.05)]
-          "
-        >
-          {/* LEFT IMAGE */}
-          <div className="relative w-full h-[310px] sm:h-[430px] rounded-xl overflow-hidden">
-            <Image
-              src="/program.jpeg"
-              alt="Neuroscience-based sales training objectives"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 420px"
-            />
-          </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_35%),linear-gradient(180deg,#020817_0%,#020b1f_100%)]" />
+      <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#3b82f6_1px,transparent_1px)] [background-size:140px_100%]" />
+      <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:100%_140px]" />
 
-          {/* RIGHT CONTENT */}
-          <div>
+      {/* Decorative blur */}
+      <div className="absolute -top-10 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
+      <div className="absolute bottom-16 left-10 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* LEFT CONTENT */}
+          <div className="max-w-md">
+            <div className="mb-6 flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/30 bg-blue-500/10 text-2xl text-blue-400 shadow-[0_0_30px_rgba(37,99,235,0.18)] backdrop-blur">
+                →
+              </div>
+            </div>
+
+            <div className="mb-4 flex items-center gap-3">
+              <span className="text-2xl font-bold text-blue-700/80">03</span>
+              <span className="h-px w-10 bg-blue-400/30" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-300">
+                Core Value
+              </span>
+            </div>
+
             <h2
               id="program-objectives-title"
-              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
+              className="text-4xl font-extrabold uppercase leading-none tracking-tight text-white sm:text-5xl"
             >
-              Program{" "}
-              <span className="text-pink-600">
-                Objectives
-              </span>
+              Innovation in
+              <br />
+              Flow
             </h2>
 
-            {/* AEO: direct answer */}
-            <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
-              The objective of this training is to help sales professionals
-              understand how the brain makes buying decisions so they can sell
-              with confidence, clarity, and connection—without pressure
+            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300 sm:text-base">
+              Advanced manufacturing techniques that optimize fluid dynamics and
+              pressure management for high-demand conduit systems.
             </p>
 
-            {/* Bullet points */}
-            <ul className="mt-5 space-y-3 text-slate-800">
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                  Improve sales team performance fast
-                </span>
-              </li>
+            <div className="mt-8">
+              <Link
+                href="#products"
+                className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-[0_14px_32px_rgba(37,99,235,0.24)] transition hover:-translate-y-0.5"
+              >
+                Capability
+                <span className="text-lg leading-none">→</span>
+              </Link>
+            </div>
+          </div>
 
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                 Build trust with ethical influence and cognitive triggers
-                </span>
-              </li>
-
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                  Recover from rejection without burnout
-                </span>
-              </li>
-
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                  Read nonverbal buyer signals with accuracy
-                </span>
-              </li>
-
-              
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                  Shift from pitching to solving
-                </span>
-              </li>
-
-              
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                  Turn LinkedIn and DMs into a reliable lead engine
-                </span>
-              </li>
-
-              
-              <li className="flex gap-3">
-                <span className="mt-2 h-2 w-2 rounded-full bg-pink-600" />
-                <span>
-                   Sell through clarity instead of pressure
-                </span>
-              </li>
-
-            </ul>
+          {/* RIGHT IMAGE */}
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-[2rem] bg-blue-500/10 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-blue-400/20 bg-white/5 p-3 shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_30px_60px_rgba(0,0,0,0.45)] backdrop-blur">
+              <div className="relative aspect-[1.15/1] overflow-hidden rounded-[1.6rem]">
+                <Image
+                  src="/steel-pipe.png"
+                  alt="Industrial conduit pipes showing innovation in flow"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 640px"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -6,11 +6,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Speaking", href: "/speaking" },
-  { label: "Media Kit", href: "/media-kit" },
-  { label: "Posts", href: "/post" },
-  { label: "Contact", href: "/contact" },
+  { label: "PRODUCTS", href: "#/products" },
+  { label: "FEATURES", href: "#/features" },
+  { label: "ABOUT", href: "#/about" },
+  { label: "CATALOGUE", href: "/catalogue" },
+  { label: "CLIENTS", href: "#/clients" },
+  { label: "CONTACT", href: "3/contact" },
+  { label: "ANALYSIS", href: "#/analysis" },
 ];
 
 export default function Navbar() {
@@ -20,10 +22,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
 
-  // route change pe close
   useEffect(() => setOpen(false), [activeHref]);
 
-  // ESC to close
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -32,7 +32,6 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // outside click to close
   useEffect(() => {
     const onDown = (e: MouseEvent | TouchEvent) => {
       if (!open) return;
@@ -56,50 +55,44 @@ export default function Navbar() {
           ref={navRef}
           className="
             relative mx-auto
-            w-full max-w-5xl
+            w-full max-w-6xl
             rounded-2xl bg-white/95 backdrop-blur
             px-3 sm:px-5 py-3 sm:py-4
             shadow-[0_10px_26px_rgba(0,0,0,0.06)]
           "
           aria-label="Primary"
         >
-          {/* Soft inner glow border (image-style) */}
-<div
-  aria-hidden="true"
-  className="
-    pointer-events-none absolute inset-0 rounded-2xl
-    ring-1 ring-black/10
-  "
-/>
+          <div
+            aria-hidden="true"
+            className="
+              pointer-events-none absolute inset-0 rounded-2xl
+              ring-1 ring-black/10
+            "
+          />
 
-<div
-  aria-hidden="true"
-  className="
-    pointer-events-none absolute inset-0 rounded-2xl
-    bg-gradient-to-r
-    from-transparent via-transparent to-transparent
-    shadow-[inset_0_-2px_0_0_rgba(236,72,153,0.55)]
-  "
-/>
+          <div
+            aria-hidden="true"
+            className="
+              pointer-events-none absolute inset-0 rounded-2xl
+              bg-gradient-to-r
+              from-transparent via-transparent to-transparent
+              shadow-[inset_0_-2px_0_0_rgba(59,130,246,0.55)]
+            "
+          />
 
-
-          {/* TOP ROW */}
           <div className="relative z-10 flex items-center justify-between gap-3">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-3 min-w-0">
               <div className="relative h-10 w-14 sm:h-11 sm:w-16 overflow-hidden rounded-xl ring-1 ring-black/10 bg-white shrink-0">
                 <Image
-                  src="/logo.jpeg"
+                  src="/logo.png"
                   alt="Butter logo"
                   fill
                   className="object-cover"
                   priority
                 />
               </div>
-
             </Link>
 
-            {/* Desktop links */}
             <ul className="hidden md:flex items-center gap-7 lg:gap-10">
               {navLinks.map((item) => {
                 const isActive = activeHref === item.href;
@@ -121,7 +114,7 @@ export default function Navbar() {
                         className={`
                           after:absolute after:left-0 after:-bottom-1.5
                           after:h-[2px] after:rounded-full
-                          after:bg-gradient-to-r after:from-fuchsia-600 after:to-pink-500
+                          after:bg-gradient-to-r after:from-blue-600 after:to-cyan-500
                           after:transition-all after:duration-200
                           ${isActive ? "after:w-full" : "after:w-0 hover:after:w-full"}
                         `}
@@ -134,9 +127,7 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* Right actions */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* Desktop CTA */}
               <Link
                 href="/contact"
                 className="
@@ -144,18 +135,17 @@ export default function Navbar() {
                   items-center justify-center
                   rounded-xl px-5 sm:px-6 py-2.5 sm:py-3
                   text-[15px] sm:text-[16px] font-semibold text-white
-                  bg-gradient-to-r from-fuchsia-600 to-pink-500
-                  shadow-[0_12px_26px_rgba(236,72,153,0.20)]
+                  bg-gradient-to-r from-blue-600 to-cyan-500
+                  shadow-[0_12px_26px_rgba(59,130,246,0.20)]
                   ring-1 ring-black/5
                   transition-all duration-200
-                  hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(236,72,153,0.25)]
+                  hover:-translate-y-0.5 hover:shadow-[0_16px_32px_rgba(59,130,246,0.25)]
                   active:translate-y-0
                 "
               >
                 Get Started
               </Link>
 
-              {/* Mobile toggle */}
               <button
                 type="button"
                 aria-label="Toggle menu"
@@ -175,7 +165,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE DROPDOWN */}
           <div
             className={`
               md:hidden overflow-hidden
@@ -196,7 +185,7 @@ export default function Navbar() {
                           rounded-xl px-4 py-3
                           text-[16px] font-semibold
                           transition
-                          ${isActive ? "bg-pink-50 text-slate-900" : "text-slate-800 hover:bg-slate-50"}
+                          ${isActive ? "bg-blue-50 text-slate-900" : "text-slate-800 hover:bg-slate-50"}
                         `}
                       >
                         {item.label}
@@ -207,7 +196,6 @@ export default function Navbar() {
                 })}
               </ul>
 
-              {/* Mobile CTA full width */}
               <div className="mt-3">
                 <Link
                   href="/contact"
@@ -215,8 +203,8 @@ export default function Navbar() {
                     inline-flex w-full items-center justify-center
                     rounded-xl px-5 py-3
                     text-[16px] font-semibold text-white
-                    bg-gradient-to-r from-fuchsia-600 to-pink-500
-                    shadow-[0_12px_26px_rgba(236,72,153,0.20)]
+                    bg-gradient-to-r from-blue-600 to-cyan-500
+                    shadow-[0_12px_26px_rgba(59,130,246,0.20)]
                     ring-1 ring-black/5
                     transition-all duration-200
                     hover:-translate-y-0.5
@@ -226,7 +214,6 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* spacing bottom because of gradient line */}
               <div className="h-2" />
             </div>
           </div>
