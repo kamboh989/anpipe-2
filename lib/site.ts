@@ -12,12 +12,7 @@ export const site = {
     "Engineering Steel",
     "Industrial Piping",
     "Lahore, Pakistan",
-    
   ],
-
- 
-
-  
 
   /** ✅ FAVICONS */
   favicon: {

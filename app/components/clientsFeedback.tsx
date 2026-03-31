@@ -29,14 +29,14 @@ export default function ProjectUpgradeSection() {
           {/* RIGHT SIDE */}
           <div className="flex gap-6">
             <Link
-              href="#initiate"
+              href="/#contact"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 text-lg font-bold text-white shadow-[0_16px_34px_rgba(37,99,235,0.22)] transition-all duration-300 hover:-translate-y-0.5"
             >
               Initiate <span className="ml-2">→</span>
             </Link>
 
             <Link
-              href="#catalog"
+              href="/catalogue"
               className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-8 py-4 text-lg font-bold text-slate-900 shadow-[0_16px_34px_rgba(15,23,42,0.1)] transition-all duration-300 hover:-translate-y-0.5"
             >
               Catalog <span className="ml-2">→</span>

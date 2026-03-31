@@ -6,13 +6,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 const navLinks = [
-  { label: "PRODUCTS", href: "#/products" },
-  { label: "FEATURES", href: "#/features" },
-  { label: "ABOUT", href: "#/about" },
+  { label: "PRODUCTS", href: "/#products" },
+  { label: "FEATURES", href: "/#features" },
+  { label: "ABOUT", href: "/#about" },
   { label: "CATALOGUE", href: "/catalogue" },
-  { label: "CLIENTS", href: "#/clients" },
-  { label: "CONTACT", href: "3/contact" },
-  { label: "ANALYSIS", href: "#/analysis" },
+  { label: "CLIENTS", href: "/#clients" },
+  { label: "CONTACT", href: "/#contact" },
+ 
 ];
 
 export default function Navbar() {
@@ -129,7 +129,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 sm:gap-3">
               <Link
-                href="/contact"
+                href="/#contact"
                 className="
                   hidden sm:inline-flex
                   items-center justify-center

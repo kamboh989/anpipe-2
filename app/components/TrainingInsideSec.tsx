@@ -64,7 +64,7 @@ export default function TrainingInsideSection() {
 
             <div className="mt-8">
               <Link
-                href="#products"
+                href="/#products"
                 className="
                   inline-flex items-center gap-3
                   rounded-2xl px-8 py-4

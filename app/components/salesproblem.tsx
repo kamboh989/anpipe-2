@@ -6,6 +6,7 @@ export default function SalesProblemSection() {
     <section
       aria-labelledby="sales-problem-title"
       className="relative overflow-hidden bg-[#020817] py-16 sm:py-20 lg:py-24"
+      id="features"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_35%),linear-gradient(180deg,#020817_0%,#020b1f_100%)]" />
@@ -73,7 +74,7 @@ export default function SalesProblemSection() {
 
             <div className="mt-8">
               <Link
-                href="#products"
+                href="/#products"
                 className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-[0_14px_32px_rgba(37,99,235,0.24)] transition hover:-translate-y-0.5"
               >
                 Capability

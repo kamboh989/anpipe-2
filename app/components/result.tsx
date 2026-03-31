@@ -27,6 +27,7 @@ export default function RealResultsSection() {
     <section
       aria-labelledby="real-results-title"
       className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      id="products"
     >
       {/* white bg + soft blue center glow */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)]" />
@@ -36,7 +37,7 @@ export default function RealResultsSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* heading */}
-        <div className="mx-auto max-w-3xl">
+        <div className="max-w-3xl text-left">
           <div className="mb-3 flex items-center gap-3">
             <span className="h-px w-10 bg-blue-500" />
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600">
@@ -103,16 +104,16 @@ export default function RealResultsSection() {
                 </p>
 
                 <div className="mt-6 flex items-center justify-between">
-                  <Link
-                    href="#products"
+                  {/* <Link
+                    href="/#products"
                     className="text-[11px] font-bold uppercase tracking-[0.24em] text-blue-600 transition hover:text-blue-800"
                   >
                     Detail →
-                  </Link>
+                  </Link> */}
 
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-blue-100 bg-blue-50 text-blue-600">
+                  {/* <span className="flex h-9 w-9 items-center justify-center rounded-full border border-blue-100 bg-blue-50 text-blue-600">
                     →
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </article>

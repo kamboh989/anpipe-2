@@ -25,6 +25,7 @@ export default function HowDeliveredSection() {
     <section
       aria-labelledby="how-help-title"
       className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      id="about"
     >
       {/* soft white + blue grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)]" />
@@ -81,7 +82,7 @@ export default function HowDeliveredSection() {
 
             <div className="mt-10">
               <Link
-                href="#capabilities"
+                href="/#products"
                 className="
                   inline-flex items-center gap-3
                   rounded-2xl px-8 py-4

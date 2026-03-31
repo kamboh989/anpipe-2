@@ -50,7 +50,7 @@ export default function ProgramObjectivesSection() {
 
             <div className="mt-8">
               <Link
-                href="#products"
+                href="/#products"
                 className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-[0_14px_32px_rgba(37,99,235,0.24)] transition hover:-translate-y-0.5"
               >
                 Capability

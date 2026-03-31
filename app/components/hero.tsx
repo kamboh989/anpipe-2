@@ -10,7 +10,7 @@ const slides = [
     description:
       "Delivering premium quality steel pipes and tubes since 1991. Trusted by industry leaders across Pakistan.",
     buttonText: "View Products",
-    href: "#products",
+    href: "/#products",
   },
   {
     badge: "Extensive Range",
@@ -18,7 +18,7 @@ const slides = [
     description:
       "From galvanized iron to ERW steel and scaffolding tubes, our range meets every project requirement.",
     buttonText: "Explore Range",
-    href: "#range",
+    href: "/#products",
   },
   {
     badge: "Global Logistics",
@@ -26,7 +26,7 @@ const slides = [
     description:
       "With an efficient global supply chain, we ensure your orders arrive safely and promptly.",
     buttonText: "Contact Us",
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 

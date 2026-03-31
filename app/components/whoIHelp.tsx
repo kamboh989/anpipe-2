@@ -30,6 +30,7 @@ export default function WhoIHelpSection() {
     <section
       aria-labelledby="who-i-help-title"
       className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      id="clients"
     >
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_100%)]" />
       <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,#3b82f6_1px,transparent_1px)] [background-size:120px_100%]" />
@@ -133,7 +134,7 @@ export default function WhoIHelpSection() {
                 </div>
 
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="
                     inline-flex items-center justify-center
                     rounded-xl px-6 py-3

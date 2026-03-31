@@ -86,27 +86,27 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/features" className="hover:text-blue-600 transition">
+                <Link href="/#features" className="hover:text-blue-600 transition">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-blue-600 transition">
+                <Link href="/#about" className="hover:text-blue-600 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-blue-600 transition">
+                <Link href="/#products" className="hover:text-blue-600 transition">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/clients" className="hover:text-blue-600 transition">
+                <Link href="/#clients" className="hover:text-blue-600 transition">
                   Clients
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-600 transition">
+                <Link href="/#contact" className="hover:text-blue-600 transition">
                   Contact
                 </Link>
               </li>
@@ -228,7 +228,7 @@ export default function Footer() {
 
           {/* Bottom Links */}
           <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-5">
-            <div className="flex items-center gap-6 text-sm text-gray-500">
+            {/* <div className="flex items-center gap-6 text-sm text-gray-500">
               <Link href="/privacy-policy" className="hover:text-blue-600 transition">
                 Privacy
               </Link>
@@ -238,13 +238,13 @@ export default function Footer() {
               <Link href="/cookies-policy" className="hover:text-blue-600 transition">
                 Cookies
               </Link>
-            </div>
+            </div> */}
 
             {/* AI VERSE last me links ke sath */}
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <span>By</span>
               <a
-                href="https://aiverse.com"
+                href="https://aiverse.pk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold tracking-[0.25em] uppercase hover:bg-blue-700 transition"
